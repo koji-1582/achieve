@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
   def index
     @blogs = Blog.all
   end
@@ -43,10 +44,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blogs_params)
     render :new if @blog.invalid?
   end
-  
    
-
-
   private
     def blogs_params
       params.require(:blog).permit(:title, :content)
