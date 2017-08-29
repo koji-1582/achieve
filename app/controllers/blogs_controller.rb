@@ -34,7 +34,6 @@ class BlogsController < ApplicationController
       render 'new'
     end
  end
-
   
   def destroy
     @blog.destroy
