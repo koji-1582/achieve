@@ -50,4 +50,6 @@ gem 'twitter-bootstrap-rails'
 
 gem 'faker'
 
-
+group :development do
+  gem 'letter_opener_web'
+end
