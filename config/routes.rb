@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :blogs,only: [:index, :new, :create, :edit, :update, :destroy] do
     collection do
-      post :confirm
+     post :confirm
     end
   end
 
@@ -71,6 +71,6 @@ Rails.application.routes.draw do
   #   end
   root 'top#index'
   if Rails.env.development?
-  mount LetterOpenerWeb::Engine, at: "/letter_opener"
+   mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 end
